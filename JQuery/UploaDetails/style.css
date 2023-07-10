@@ -1,0 +1,37 @@
+main{
+	width: 40%;
+	display: inline-block;
+	height: 400px;
+	border: 1px solid black;
+	margin-left: 2%;
+	position: relative;
+}
+aside{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 2%;
+	width: 55%;
+	border: 1px solid green;
+	height: auto;
+}
+.form-div{
+	position: absolute;
+	top: 31%;
+	left: 25%;
+}
+#aside-main{
+	height: auto;
+	width: 100%;
+	border: 2px solid darkred;
+/*	display: flex;
+	flex-direction: column;
+*/
+}
+.name-roll-marks{
+	height: 40px;
+	width: 100%;
+	border: 1px solid green;
+}
+.num-mar{
+	background-color: lightgreen;
+}

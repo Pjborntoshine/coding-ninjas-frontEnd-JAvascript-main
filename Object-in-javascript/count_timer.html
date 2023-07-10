@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Counter Down timer</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var count = 10;
+		function counterInt() {
+			console.log(count);
+			count--;
+			if(count==0){
+			clearInterval(id)
+			return
+		}
+		}
+		var id= setInterval(counterInt,1000)
+
+	</script>
+</body>
+</html>

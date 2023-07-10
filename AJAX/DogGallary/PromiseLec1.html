@@ -1,0 +1,56 @@
+<!-- // a promsie is some thing which indicate about success or failues of some processi.e async or sync task -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var userIsLoggedIn = true;
+
+	function checkLoggedIn() { // generally we packed promise in to a function
+		
+	
+	var promise = new Promise((
+	resolve,reject)=>{
+		// wait for 1 sec
+		setTimeout(()=>{
+			// posmise is resolved
+			if(userIsLoggedIn){
+			resolve('successful user logged in');
+		}else{
+			// reject
+			reject()
+		}
+		},1000) // min time sys will wait to exe
+		return promise;
+
+	} ); // using arroe function
+// once the promise is completed the 
+
+}
+
+
+// setTimeout(()=>{
+// 	userIsLoggedIn = false
+// },500);
+
+
+
+
+/*
+promise.then((succMes)=>{ // hwre we can pass message  ex
+	// console.log('successful user logged in')
+	console.log(succMes)
+}).catch(()=>{console.log('reject')}) // this is correspond to resolve or success in line 10
+*/
+checkLoggedIn().then((succMes)=>{ // hwre we can pass message  ex
+	// console.log('successful user logged in')
+	console.log(succMes)
+}).catch(()=>{console.log('reject')}) // this is correspond to resolve or success in line 10
+
+
+</script>
+</body>
+</html>

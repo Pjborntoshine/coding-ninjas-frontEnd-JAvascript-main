@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>iterating object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var student = {
+			name:'abc', // keys:pairs 
+			rollno:135,
+			marks:90,
+			address:{
+				city:'new delhi',
+				pincode:111222,
+			}
+		};
+
+		// for geting keys
+		var keys=Object.keys(student)
+		console.log(keys)
+		var keys1=Object.getOwnPropertyNames(student)
+		console.log(keys1)
+		for(var prop in student) // here prop is the variable
+		{
+			console.log(prop,student[prop]) // here the prop is dynamically decide and . will not work here
+		}
+		// nested objects address
+		console.log(student.address)
+		console.log(student.address.city)
+		console.log(student.address["city"]) // using dot
+// syntex top-most object.child.sub-child
+
+// iterating over array using for in
+var arrs = [1,2,3,4,5]
+var obj = {
+	"0":20,
+	"1":30,
+	"3":40,
+	"4":50
+}
+
+obj.prop1 = "demo"
+arrs.prop1 = "demo1" // here by doing this legty will not change
+for(var i in arrs) {
+	console.log(i) //this will iterat over all teh keys
+}
+
+
+// timing event
+// setTimeout()
+sec=1;
+function  sayhello() {
+	console.log('hell')
+	sec++;
+	if(sec == 6){
+		clearInterval(id) // to stop interval
+	}
+}
+//setTimeout(sayhello,3000) // we are passing we are not making call sayhello() it function call
+// for repetation
+//setInterval(sayhello,10000) // it will execute in repetative manner
+// to stop timing interval
+var id= setInterval(sayhello,1000) // it will stop here id is something which is requird by clearIntrval
+	</script>
+
+
+
+</body>
+</html>

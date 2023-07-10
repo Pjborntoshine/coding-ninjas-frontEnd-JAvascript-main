@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+// 	var i = 10;
+// 		function outer() {
+// 			var j=20;
+// //			console.log(i,j)
+// 			var inner = function inner() {
+// 				var k=30;
+// 				console.log(j,k)
+// 				k++;
+// 			
+// 			}
+// 			return inner;
+// 		}
+// 	var inner =outer() 
+// 	inner(); //op 20,30 --->if j++ is present 20,30
+// 	inner();//op 20,30 ---> if j++ is present 20,30 
+// 	// beacause here  in the first time it execution context is created and k as 30 and after it gets over now in the second call to inner function will create a new execation context with k = 30 from the start and then k++ nut it will againg destory if we cann inner() again
+	
+	
+	
+	
+		var i = 10; // here if we wirte i++ also 
+		function outer() {
+			var j=20;
+//			console.log(i,j)
+			var inner = function inner() {
+				var k=30;
+				console.log(j,k)
+				k++;
+				j++;
+				// i++ then the value of op will be like 10 20 30 ,11 21 30
+			}
+			return inner;
+		}
+	var inner =outer() 
+	inner(); //op 20,30 --->if j++ is present 20,30
+	inner();//op 20,30 ---> if j++ is present 20,31 
+	// here we  op is like this beacause when we call outer there is execuation env is created for outer and it will have value of j as 20
+	// in the above the op is same bacause at every call of inner a new scope is creaed and it get destoryed new the outer is returning the inner function and the inner i.e of line 43 will going to preserve the the value of ouetr variables i.e it will acctuall have referance of j here first inner call will be call and compleete its task after that 2ne inner function will be called and it will create fresh inner function and have new value of k but it doesnot have not new value of j i.e outer will be store as reference
+	// op will 
+	
+	var i = 10;
+		function outer() {
+			var j=20;
+//			console.log(i,j)
+			var inner = function inner() {
+				var k=30;
+				console.log(j,k)
+				k++;
+				j++; 
+				i++
+			}
+			return inner;
+		}
+	var inner =outer();
+	inner(); // return op as 10 20 30
+	var inner = outer();
+	inner(); // op 11 20 30 
+	// here j and k are not really affectd only i is affected beacause it is a global variable and has accesto all function call
+	
+	
+</script>
+</body>
+</html>

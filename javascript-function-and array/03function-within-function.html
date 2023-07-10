@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>function and scope</title>
+</head>
+<body>
+<script type="text/javascript">
+	var name = 'global';
+	function outer() {
+		var name = 'outer';
+		var outerVar = 10;
+		function inner() {
+			var name = 'inner';
+			//console.log(outerVar)
+			console.log(name)
+		}
+		inner()
+		console.log(name)
+	}
+	outer()
+	console.log(name)
+	// function declaration
+	// function fact(n){
+	// 	var ans = 1;
+	// 	for(var = 1; i<=n; i++){
+	// 		ans = ans*i;
+	// 	}
+	// 	return ans;
+	// }
+	
+	// function expression
+
+	// var factorial = function fact(n){ // it is also called named function epression and fact(n)
+	// 	var ans = 1;
+	// 	for(var = 1; i<=n; i++){
+	// 		ans = ans*i;
+	// 	}
+	// 	return ans;
+	// }
+	// console.log(factorial) // thsi will print function fact(n){..}
+	// console.log(factorial(5))
+
+
+	// var factorial2 = function (n){ // it is also called anonomyus function here we are not giving name to function both this and above one is function expression	var ans = 1;
+	// 	for(var = 1; i<=n; i++){
+	// 		ans = ans*i;
+	// 	}
+	// 	return ans;
+	// }
+	//console.log(factorial)
+
+	// passing function as an argument
+	var fact198 = function fact(n){
+		var ans = 1;
+		for(var i=1;i<=n;i++){
+			ans=ans*i;
+		}
+		return ans;
+	}
+	function ncr(n,r,fact198){ //here we are passing function as an argument to another function
+		//function ncr(n,r,function(){ code}){} here we can simply pass thefunction 
+		return fact198(n)/(fact198(r)*fact198(n-r));
+	}
+console.log(ncr(5,2,fact198)); 
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.main-container{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background: wheat;
+}
+.button-and-container{
+	height: auto;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 30%;
+	top: 50%;
+}
+.bucket{
+	height: 150px;
+    width: 500px;
+    background-color: cyan;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
+
+}
+.ball{
+	height: 50px;
+	width: 50px;
+	border-radius:50% ;
+	background-color: white;
+	margin: 2px;
+}

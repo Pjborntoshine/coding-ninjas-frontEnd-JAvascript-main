@@ -1,0 +1,63 @@
+.super-main-contain{
+	height: 50vh;
+	width: 100vw;
+}
+.main-cont{
+	height: 250px;
+	width: 100%;
+}
+
+.data-and-getImage{
+	width: 100%;
+	height: 100%;
+	background-color: wheat;
+	display: flex;
+	align-items: center;
+    justify-content: space-evenly;
+}
+
+#getRoverImage
+{
+	height: 30px;
+}
+
+.newImageDivdem{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+.imageboxDem{
+	height: 216px;
+    width: 423px;
+    border: 1px solid black;
+	margin-top: 15px;
+}
+.imageDem{
+	height: 100%;
+	width: 100%;
+}
+
+/*design for next and prev*/
+.prev-and-next-sec{
+	height: 200px;
+	width: 100%;
+	margin-top: 15px;
+	border: 1px solid black;
+	background-color: lightgray;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+
+}
+.prev-and-next-sec button{
+	height: 35px;
+}
+#super-main-contain img {
+    max-height: 300px;
+    max-width: 100%;
+    min-height: 200px;
+    margin: 20px;
+
+
+}

@@ -1,0 +1,53 @@
+.main-cont{
+	height: 100vh;
+	width: 100vw;
+}
+
+.data-and-getImage{
+	width: 100%;
+	height: 30%;
+	background-color: wheat;
+	display: flex;
+	align-items: center;
+    justify-content: space-evenly;
+}
+
+#getRoverImage
+{
+	height: 30px;
+}
+
+.newImageDivdem{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 65px;
+}
+.imageboxDem{
+	height: 216px;
+    width: 423px;
+    border: 1px solid black;
+	margin-top: 15px;
+}
+.imageDem{
+	height: 100%;
+	width: 100%;
+}
+
+.dog-with-breed{
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 65px;	
+}
+
+.dogbreedListDem{
+	height: 232px;
+    width: 255px;
+    border: 1px solid black;
+    margin: 133px;
+}
+.dogbreedImgDem{
+	height: 100%;
+	width: 100%;
+}

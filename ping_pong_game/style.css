@@ -1,0 +1,38 @@
+.main-div{
+	height: 95vh;
+	width: 95vw;
+	border: 1px solid darkred;
+	/*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+    position: relative;
+}
+.ball{
+	height: 25px;
+	width: 25px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background-color: green;
+	margin-top: 15px;
+
+}
+.rod{
+	height: 15px;
+	width: 100px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	margin-left: 0px;
+
+}
+.upper-rod{
+	background-color: blue;
+	position: absolute;
+	top: 0%;
+}
+.lower-rod{
+	background-color: purple;
+	position: absolute;
+	bottom: 0%;
+}

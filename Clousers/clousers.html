@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clousers</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	/*	var i = 10;
+		function outer() {
+			var j=20;
+			console.log(i,j)
+			function inner() {
+				var k=30;
+				console.log(j,k)
+			}
+			inner();
+		}
+	outer()
+	*/
+	//op->10,20 newline 20,30
+/*
+		var i = 10;
+		function outer() {
+			var j=20;
+			console.log(i,j)
+			return function inner() {
+				var k =30;
+				console.log(j,k)
+			}
+					}
+	outer()
+*/
+
+
+	var i = 10;
+		function outer() {
+			var j=20;
+			console.log(i,j)
+			var inner = function inner() {
+				var k=30;
+				console.log(j,k)
+			}
+			return inner;
+		}
+	var inner =outer() 
+	inner();
+	// this clas will return inner function op->10,20 ne line 20,30
+
+	</script>
+</body>
+</html>

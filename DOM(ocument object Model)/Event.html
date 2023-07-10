@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Event handling</title>
+</head>
+<body>
+	<!-- <button id ="btn" onclick="alert('hello!!')">Say Hello</button> -->
+
+	<button id ="btn">Say Hello</button>
+	<script type="text/javascript">
+		var hellobtn = document.getElementById('btn');
+		// adding event listner
+		// this funtion as two important argument to be passed 1.event that ypu want to handle 2.action you want to perform
+		hellobtn.addEventListener('click',function(){
+			alert('HHHello')
+		}
+		) 
+	</script>
+</body>
+</html>

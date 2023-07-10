@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function showAlert(){
+			alert('Hey!!');
+		} 
+		showAlert();
+		function sum(a,b){
+			alert(a+b);
+		}
+		sum(10,12);
+		function sum1(a,b){
+			return a+b;
+		}
+		var res = sum1(10,12);
+		console.log(res);
+		var rss = sum1(10) //it will return NaN adding 10 to undefined
+		console.log(rss)
+		var rsss2 = sum1(10,20,25); //3rd argument will be ingorned
+		console.log(rsss2)
+		// function josting
+		console.log(j) // this is called variable hoisting js will identify the variable where it is being defined
+		function hoistDemo(){
+			console.log(i)// this is called variable hoisting
+			var i=10;
+		}
+		hoistDemo()
+		var j = 10;
+		// function josting
+		funhoist(); // function hoisting
+		function funhoist(){
+			console.log(i);
+			var i=10;
+		}
+		var j = 10;
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>this in static mode</title>
+</head>
+<body>
+<script type="text/javascript">
+	'use script' 
+	// if we calling a function in a plain way then in that case 'this ' will refer to window objct
+	function demo() {
+		console.log(this)
+	}// if we are calling demo then o/p->will be windows as it will refer to window 
+
+	
+	var demo33 = function demo() {
+		console.log(this)
+	}
+	// if we are calling demo then o/p->will be windows as it will refer to window 
+	function demo2(a,b) {
+		console.log(this)
+		console.log(a,b)
+	}
+
+	var obj = {
+		'prop1':12,
+		'print':function(){
+			console.log(this)
+		}
+	}
+	demo(); // window here if we use 'use strict' then undefined will be the output
+	// if we are calling function in a plan way then the function is not bound to any object  
+	obj.print(); // {...obj} here the out put will be object{} property unlike function demo and demo33
+
+
+	//we can bound a function to an object we acan do tha by call and apply
+	demo.call(obj) // here in call we can actully bound the object  there fore the outut will be object'obj' and here we can pass any objet like if we want to pass window object thne it will be bound with window object
+	demo.call(window)
+	// here we can alos use apply insted of call the result will be same
+	demo.apply(obj) 
+// *******the major difference between call and apply is passing argument let check the example of demo2
+demo2.call(obj,2,3);
+// if we are using apply then we can cann it by using by this
+demo2.apply(obj,[3,4]) // check diff 36 and 38
+</script>
+</body>
+</html>

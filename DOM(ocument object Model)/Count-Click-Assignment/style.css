@@ -1,0 +1,13 @@
+.button-and-para{
+	height: auto;
+	width: auto;
+	/*background-color: darkred;*/
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+#btn{
+	height: 100px;
+	width: 100px;
+	background-color: darkred;
+}

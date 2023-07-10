@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>function and scope</title>
+</head>
+<body>
+<script type="text/javascript">
+	 var name = 'global scope'
+	 //console.log(name)
+	 function scopeDemo(){
+	 	// var i=10;
+	 	// console.log(i);
+	 	var name = 'function';
+	 	console.log(name) // op function inteperator look into current scope
+	 }
+	 scopeDemo();
+	 console.log(name)
+	 //console.log(i)
+	 function c() {
+
+	 	console.log('inside c')
+	 }
+	 function b() {
+	 	c()
+	 	console.log('inside b')
+
+	 }
+	 function a() {
+	 	b()
+	 	console.log('inside a')
+	 }
+	 a()
+	 console.log('global context')
+</script>
+</body>
+</html>

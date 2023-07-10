@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>this in static mode</title>
+</head>
+<body>
+<script type="text/javascript">
+	// javascript let us call a function a constructor
+	// js doen not class concept like other programing language we have object
+	var syudent1 = {
+		name:"abc",
+		rollno:10,
+		marks:80
+	};
+	var syudent1 = {
+		name:"xyz",
+		rollno:11,
+		marks:1
+	};
+	
+	console.log(syudent1) // op object eith above prorp
+	 // 
+
+	 function createStudent(name,rollno,marks){
+	 	var student = {} //? name of object // we can use new Object(); 
+	 	student.name = name;
+	 	student.rollno = rollno;
+	 	student.marks = marks;
+	 	return student;
+	 }
+
+	 var student1 = createStudent('abcd',15,78);
+	 var student2  = createStudent('aaa',25,90);
+
+	 // creating java script constructor all we need to do is to write new key word
+	  function createStudent2(name,rollno,marks){
+	 //	var student = {} //? name of object // we can use new Object(); 
+	 	// here we need to use this keyword when we are calling a function then the function is bound to an abject  this is why we use this key-word
+	 	console.log(this)
+	 	this.name = name;
+	 	this.rollno = rollno;
+	 	this.marks = marks;
+	 	
+	 }
+
+	 var student4 =new createStudent2('aasbcd',15,78);
+	 var student5  =createStudent2('aaabb',25,90);
+	 // here we will get reference error 
+
+
+	 //**************************** prototype object->it comes into play when we are using it on constructor
+	 function Vehicle(numWheel,price) {
+	 	this.numWheel = numWheel;
+	 	this.price = price;
+	 	// this.getPrice = function() {
+	 	// 	return this.price;
+	 	// }
+
+	 }
+	 Vehicle.prototype.getPrice = function() {
+	 		return this.price;
+	 }
+	 // in th eabove code getPrice prop will be created and it will be @ prototype of vehicle function and v1 and v1 have a common point by which getPrice can be called thus by this we can avoid creating multiple getPrice function line no 56 to 58 no individual copy only single and will be shared by ever object 2.we can add prop @ runtime 3. the prototype can have ref to some other prototyp also like inheritance ex->vehical->car->maruti
+
+	 // in console v1.getPrice()
+	 
+	  Vehicle.prototype.color = "black";
+// check Vehicle.prototype 
+	 var v1 = new Vehicle(2,50000);
+	 var v2 = new Vehicle(2,50);
+ 
+	 // to access function prototype
+	// v1.prototype
+	// getting back to functio
+	//v1.prototype.constructor
+</script>
+</body>
+</html>

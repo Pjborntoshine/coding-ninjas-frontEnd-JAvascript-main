@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOm Proctice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id="one">Heading</h1>
+	<h1 id="two">Heading</h1>
+	<p class="para">Sample Paragraph</p>
+
+	<script type="text/javascript">
+		var heading=document.getElementById('one')
+		console.log(heading);
+		heading.style.color='red';
+		heading.style.backgroundColor='cyan';
+		var headingss = document.getElementsByTagName('h1')
+		console.log(headingss)
+		// changing the heading of 2 tag 
+		headingss[1].innerText = 'Seconds Headings';
+		var para  = document.getElementsByClassName('para')
+		console.log(para)
+		para.style.backgroundColor = 'cyan';
+		// selecting by CSS Selector by Id
+		var heading123 = document.querySelector('#one')
+		heading123.innerText = 'heyyyy';
+		// selecting by CSS Selector by class
+		var heading123 = document.querySelector('.para')
+		heading123.innerText = 'by query selector';
+		
+	</script>
+</body>
+</html>

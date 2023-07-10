@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bog breeed wise</title>
+	<style type="text/css">
+		body{
+			background-color: lightblue;
+		}
+		.dogoption-and-burron{
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.dog-image-cont{
+			height: 300px;
+			width: 400px;
+			border: 1px solid black;
+			margin-top: 100px;
+		}
+		#dog-image{
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class='main-cont'>
+		<div class="dogoption-and-burron">
+			<div class="selectop">
+				
+				<select name="DogBreedslist" id="dogList">
+					  <option value="African">African</option>
+					  <option value="Boxer">Boxer</option>
+					  <!-- <option value="mercedes">Mercedes</option>
+					  <option value="audi">Audi</option> -->
+					</select>
+
+			</div>
+			<button id="getImage">GET Image</button>
+		</div>
+		<div class="dog-image-cont">
+			<img id="dog-image">
+		</div>
+		<button id="next">Next</button>
+	</div>
+
+
+<script src="jquery-3.6.0.js"></script>
+<script src="Dog_Details_BreedWise_Assign_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arrays</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//var arr = [1,2,3,4];
+		var arr = new Array(1,2,3,4,5);
+		var arr = new Array();
+		var arr = new Array(2) // her 2 is the size of array
+		var arr = new Array(2,3) // hrer 2 and 3 will be element of array unlike th eupper one
+		arr[3]
+		arr[6] // it will not throw error but give undefined
+		// for setting a value
+		arr[2]=90;
+		arr[7] = 100; // invalid index  here ther ewill be insertion will be happen
+		// checking length
+		arr.length
+		// function of arrays
+		// arrays in javascript can be hetrogenous.here array in JS is sight different as compare to other programming language
+		var arr = ["abc",10,true,20]
+		var arr = new Array(1000) // this will  specify the size of array o/p(1000(empty*1000))
+		var arr = (4.5,6,7);
+		arr.length;
+		arr.push(10) // push the value @ the end of teh array
+		arr.pop() // to pop out the element
+		arr.shift() // to shift array on left side
+		arr.unshift()// to shift array on right side
+		arr.unshift(8) // adding to  op(8,4,5.6,7)
+		// MDN blog for array function
+		// splice function it is used to make change lije add or remove
+		var ar1 = [2,4,5,67];
+		ar1.splice(1,1) // start from ind= and detete 1 4 will remove from array
+		arr1.splice(1) // for removing all element after 1 op2
+		// for inserting element at a particular index
+		arr1.splice(2,0,10) // starting @2 no delation and adding 10 @2 position
+		arr1.splice(2,0,10,30,40) // insertion from 3 onwards
+		// paralle insertion and deletion
+		arr2 = [1,8,5,6,3,5,9];
+		arr2.splice(2,2,40,50)// adding and deletion arallely
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>object in js</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// javascript object is called property
+		//object in js are actuall is diffent it is more of key value pair
+		var student = {}; // this will create empty object
+		var student = {
+			name:'abc', // keys:pairs 
+			rollno:135,
+			marks:90
+		};
+		// for accesing the prop
+		student.marks
+		student.marks = 100 // to change or update
+		// prop whih is not defined then in that case it will give undefined e.x student.sem
+		
+		// now creating new property i.e update
+		student.sem = 4
+		// the above will added in the object object are key value pair and at any point of time we can create the property
+		// object dont have access modifiers like public private etc
+
+		// accessing prop using []
+		student["marks"]
+		var student = {
+			"-name":'abc', // keys:pairs 
+			rollno:135,
+			marks:90
+		};
+		//in the above object we have made a -name prop
+		student.-name// this is a ivalid stmt as we are calling a field by object is not possible 
+		// there fore we use
+		student["-name"] //to call the prop i.e if the key is starting -,_,number like 1,2 then the stmt is invalid
+
+		// &**********&
+
+		function printProp(onj,prop){
+			console.log(onj[prop]) // here we can't use onj.prop
+		}
+
+		var prop = "marks";
+		printProp(student,"marks")
+		// deleting prop
+		delete student.marks
+		delete student["marks"]
+
+		
+	</script>
+</body>
+</html>

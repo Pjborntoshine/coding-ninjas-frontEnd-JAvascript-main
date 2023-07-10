@@ -1,0 +1,16 @@
+.main-cont{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+.catch-me-box{
+	height: 70px;
+	width: 70px;
+	border: 1px solid black;
+	background-color: purple;
+	position: absolute;
+
+}
+.catch-me-box p{
+	color: wheat;
+}
